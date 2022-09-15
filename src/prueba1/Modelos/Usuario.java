@@ -1,19 +1,50 @@
 package prueba1.Modelos;
 
+//ID, nombre completo, rut, digito verificador, fecha de nacimiento, teléfono, 
+//email, nombre de usuario y contraseña.
+
+import java.util.Date;
+
 public class Usuario {
     
     private int Id;
-    private String Nombre;
-    private String Mail;
+    private String Nombres;
+    private String Apellidos;
+    private int Rut;
+    private String Dv;
+    private Date FechaNacimiento;
+    private int Telefono;
+    private String Email;
+    private String NombreUsuario;
     private String Contraseña;
-    
-    public Usuario(){
-        this.Id = 0;
-        this.Nombre = "";
-        this.Mail = "";
-        this.Contraseña = "";
+
+
+    public Usuario(int Id, String Nombres, String Apellidos, int Rut, String Dv, Date FechaNacimiento, int Telefono, String Email, String NombreUsuario, String Contraseña) {
+        this.Id = Id;
+        this.Nombres = Nombres;
+        this.Apellidos = Apellidos;
+        this.Rut = Rut;
+        this.Dv = Dv;
+        this.FechaNacimiento = FechaNacimiento;
+        this.Telefono = Telefono;
+        this.Email = Email;
+        this.NombreUsuario = NombreUsuario;
+        this.Contraseña = Contraseña;
     }
 
+        public Usuario() {
+        this.Id = 0;
+        this.Nombres = "";
+        this.Apellidos = "";
+        this.Rut = 0;
+        this.Dv = "";
+        this.FechaNacimiento = new Date();
+        this.Telefono = 0;
+        this.Email = "";
+        this.NombreUsuario = "";
+        this.Contraseña = "";
+    }
+    
     public int getId() {
         return Id;
     }
@@ -22,20 +53,68 @@ public class Usuario {
         this.Id = Id;
     }
 
-    public String getNombre() {
-        return Nombre;
+    public String getNombres() {
+        return Nombres;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombres(String Nombres) {
+        this.Nombres = Nombres;
     }
 
-    public String getMail() {
-        return Mail;
+    public String getApellidos() {
+        return Apellidos;
     }
 
-    public void setMail(String Mail) {
-        this.Mail = Mail;
+    public void setApellidos(String Apellidos) {
+        this.Apellidos = Apellidos;
+    }
+
+    public int getRut() {
+        return Rut;
+    }
+
+    public void setRut(int Rut) {
+        this.Rut = Rut;
+    }
+
+    public String getDv() {
+        return Dv;
+    }
+
+    public void setDv(String Dv) {
+        this.Dv = Dv;
+    }
+
+    public Date getFechaNacimiento() {
+        return FechaNacimiento;
+    }
+
+    public void setFechaNacimiento(Date FechaNacimiento) {
+        this.FechaNacimiento = FechaNacimiento;
+    }
+
+    public int getTelefono() {
+        return Telefono;
+    }
+
+    public void setTelefono(int Telefono) {
+        this.Telefono = Telefono;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    public String getNombreUsuario() {
+        return NombreUsuario;
+    }
+
+    public void setNombreUsuario(String NombreUsuario) {
+        this.NombreUsuario = NombreUsuario;
     }
 
     public String getContraseña() {
@@ -43,7 +122,6 @@ public class Usuario {
     }
 
     public void setContraseña(String Contraseña) {
-        
         this.Contraseña = Contraseña;
         
         char[] mayusculas = {'A', 'G'};
@@ -54,7 +132,12 @@ public class Usuario {
         caracteres.append(mayusculas);
         caracteres.append(minusculas);
         caracteres.append(numeros);
-       
+        
+        
     }
     
+    
 }
+
+    
+   
